@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franklin Choi - NLP Researcher</title>
+    
+    <!-- Tailwind CSS (Utility classes for styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2c3e50',
+                        accent: '#3498db',
+                        link: '#007bff',
+                        secondary: '#6c757d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #fcfcfc;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e0; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0; 
+        }
+        
+        .icon-link {
+            transition: color 0.2s ease;
+        }
+        .icon-link:hover {
+            color: #3498db;
+        }
+        
+        .pub-title {
+            font-weight: 500;
+            color: #000;
+        }
+        .pub-authors {
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .pub-venue {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .tag-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: #2c3e50;
+            border-radius: 4px;
+            margin-left: 6px;
+        }
+        .btn-outline {
+            border: 1px solid #3498db;
+            color: #3498db;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .btn-outline:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        /* Sidebar Sticky */
+        .sidebar {
+            height: auto;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                position: sticky;
+                top: 2rem;
+                height: calc(100vh - 4rem);
+                overflow-y: auto;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex flex-col md:flex-row gap-10">
+
+            <!-- LEFT COLUMN: Profile / Sidebar -->
+            <div class="w-full md:w-1/4 shrink-0">
+                <div class="sidebar flex flex-col items-center md:items-start text-center md:text-left space-y-4">
+                    
+                    <!-- Profile Image -->
+                    <div class="w-48 h-48 rounded-full overflow-hidden shadow-md border-4 border-white mb-2">
+                        <!-- IMPORTANT: Rename your uploaded photo to 'avatar.jpg' and put it in the repo -->
+                        <img src="avatar.jpg" 
+                             onerror="this.src='https://ui-avatars.com/api/?name=Franklin+Choi&background=2c3e50&color=fff&size=256'"
+                             alt="Franklin Choi" 
+                             class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Name & Title -->
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-900">Franklin Choi</h1>
+                        <p class="text-lg text-gray-600 font-medium mt-1">MSc Student</p>
+                        <p class="text-gray-500">NLP Researcher</p>
+                        <p class="text-gray-400 text-sm mt-1">Macau University of Science and Technology</p>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="text-gray-600 flex items-center justify-center md:justify-start gap-2">
+                        <i class="fas fa-map-marker-alt w-5 text-center"></i>
+                        <span>Macau</span>
+                    </div>
+
+                    <!-- Contact / Social Links -->
+                    <div class="flex flex-col space-y-2 w-full mt-4">
+                        <a href="mailto:2240010133@student.must.edu.mo" class="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition break-all">
+                            <i class="fas fa-envelope w-5 text-center flex-shrink-0"></i>
+                            <span class="text-sm">Email</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Main Content -->
+            <div class="w-full md:flex-1">
+                
+                <!-- About Me -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-100 pb-2 mb-4 text-gray-800">About Me</h2>
+                    <div class="text-gray-700 leading-relaxed space-y-4">
+                        <p>
+                            I am a MSc student and NLP researcher at the <strong>Macau University of Science and Technology (MUST)</strong>, supervised by 
+                            <a href="https://fie.must.edu.mo/id-1444/person/view/id-530.html" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline transition">Qinlin Zhao</a>. 
+                            My current research interest is latent space reasoning. Previously, I was an NLP researcher supervised by Hui Ye, mainly focused on text classification and graph representation of medical records.
+                        </p>
+                        
+                        <p>
+                            At the beginning of my bachelor’s time, I just happened to join a research group without being aware of what I needed to research. As time went by, I realized that most existence could be, or should be expressed into language, making text itself actually become relatively global “information” instead of local “signals” limited into specific sectors. Therefore, if we need to construct a comprehensive cognition of this world and our minds, along with connecting most features inside, the cognition of language would be a road must follow. That was why I selected NLP at that time.
+                        </p>
+                        <p>
+                            However, sequential texts limit information and features into a relatively fixed structure, making them hard to be analyzed and applied. Therefore, I attempted to represent text information into graph structure to relationship features subsequently. Similarly, since explicit Chain-of-Thought (CoT) also limits representation and reasoning into sequential tokens, I drop myself into latent space reasoning, and hope to have partners to investigate this new found land.
+                        </p>
+
+                        <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-500 my-6">
+                            "I have my duty to give my answer"
+                        </blockquote>
+                    </div>
+                </section>
+
+                <!-- Publications -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-100 pb-2 mb-6 text-gray-800">
+                        <i class="fas fa-book-open mr-2 text-gray-400"></i> Selected Publications
+                    </h2>
+                    
+                    <div class="space-y-6 mb-10">
+                        <!-- Paper 1 -->
+                        <div>
+                            <div class="pub-title">
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-031-25191-7_17" target="_blank" class="hover:underline text-blue-700">Chinese Medical Text Classification with RoBERTa</a>
+                                <span class="tag-badge bg-blue-600">BECB 2022</span>
+                            </div>
+                            <div class="pub-authors mt-1">
+                                <strong>Fengquan Cai</strong>, Hui Ye
+                            </div>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-031-25191-7_17" target="_blank" class="btn-outline text-xs">
+                                    <i class="fas fa-external-link-alt"></i> Link
+                                </a>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-2">
+                                Construct a textual representation with RoBERTa then take classification.
+                            </p>
+                        </div>
+
+                        <!-- Paper 2 -->
+                        <div>
+                            <div class="pub-title">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10385564" target="_blank" class="hover:underline text-blue-700">Graph Representation of Chinese EMRs and its Short-text Classification Application</a>
+                                <span class="tag-badge bg-blue-600">IEEE BIBM 2023</span>
+                            </div>
+                            <div class="pub-authors mt-1">
+                                <strong>Fengquan Cai</strong>, Dong Cao, Hui Ye
+                            </div>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10385564" target="_blank" class="btn-outline text-xs">
+                                    <i class="fas fa-external-link-alt"></i> Link
+                                </a>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-2">
+                                Construct a graph representation using PMI for edges and word2vec for nodes to enhance classification performance.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-100 pb-2 mb-4 text-gray-800">
+                        <i class="fas fa-user-graduate mr-2 text-gray-400"></i> Education
+                    </h2>
+                    <div class="space-y-6">
+                        <!-- Master's -->
+                        <div>
+                            <div class="flex flex-col sm:flex-row justify-between">
+                                <div class="font-semibold text-gray-800">Macau University of Science and Technology</div>
+                                <div class="text-gray-500 text-sm font-mono">2024.09 - 2026.08 (Expected)</div>
+                            </div>
+                            <div class="text-gray-600 ml-4 border-l-2 border-gray-200 pl-4 mt-1">
+                                Master of Science (Information Technology)
+                            </div>
+                        </div>
+
+                        <!-- Bachelor's -->
+                        <div>
+                            <div class="flex flex-col sm:flex-row justify-between">
+                                <div class="font-semibold text-gray-800">Guangzhou University of Chinese Medicine</div>
+                                <div class="text-gray-500 text-sm font-mono">2018.09 - 2022.06</div>
+                            </div>
+                            <div class="text-gray-600 ml-4 border-l-2 border-gray-200 pl-4 mt-1">
+                                Bachelor's Degree in Engineering, Medical Information Engineering
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Research Experience -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-100 pb-2 mb-4 text-gray-800">
+                        <i class="fas fa-flask mr-2 text-gray-400"></i> Research Experience
+                    </h2>
+                    <ul class="space-y-6 text-gray-700">
+                        <li class="flex flex-col sm:flex-row sm:gap-4">
+                            <div class="sm:w-32 text-gray-500 text-sm font-mono shrink-0 pt-1">2021 - 2022</div>
+                            <div>
+                                <div class="font-bold text-gray-900">Research Intern</div>
+                                <div class="text-sm text-gray-600 mb-2">Big Data Research Team, Guangdong Hospital of Traditional Chinese Medicine</div>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    Assisted in primary and secondary source research about medical AI, NLP, and LLM. Contributed to the enhancement and evaluation of the Intelligent Clinic Service Platform, encompassing medical data processing (text and image) and automated analysis.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex flex-col sm:flex-row sm:gap-4">
+                            <div class="sm:w-32 text-gray-500 text-sm font-mono shrink-0 pt-1">2019 - 2022</div>
+                            <div>
+                                <div class="font-bold text-gray-900">Student Researcher</div>
+                                <div class="text-sm text-gray-600 mb-2">Chinese Traditional Medical Intelligence Lab, GZUCM</div>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    Explored cutting-edge technologies in NLP, Medical AI, and Graph Processing. Studied and employed NLP techniques to enhance medical programs.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Honors -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-100 pb-2 mb-4 text-gray-800">
+                        <i class="fas fa-trophy mr-2 text-gray-400"></i> Honors and Awards
+                    </h2>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="font-mono text-gray-500 min-w-[60px]">2022</span>
+                            <span>Excellent Graduate Thesis of College</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer class="mt-20 border-t border-gray-200 pt-6 pb-10 text-center text-gray-400 text-sm">
+                    <p>&copy; 2025 Franklin Choi. Powered by GitHub Pages.</p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
